@@ -79,10 +79,19 @@ fun GreetingCard() {
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceAround
         ) {
-            Button(onClick = { /* Simulación de acción */ }) {
+            Button(onClick = { /* Simulación de acción */ },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Blue,
+                    contentColor = Color.White
+                )
+            )
+            {
                 Text("Accept")
             }
-            Button(onClick = { /* Simulación de acción */ }) {
+            Button(onClick = { /* Simulación de acción */ },
+                enabled = false
+            )
+            {
                 Text("Decline")
             }
         }
